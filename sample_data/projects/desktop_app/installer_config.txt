@@ -1,0 +1,7 @@
+DESKTOP APP INSTALLER CONFIGURATION
+
+This document contains installer settings.
+Important paths and registry entries documented.
+
+The installer supports Windows 10 and 11.
+This configuration should be reviewed before release.

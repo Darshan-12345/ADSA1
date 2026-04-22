@@ -1,0 +1,2 @@
+Graph relationships connect related files by extension, folder, or duplicate patterns.
+This document mentions adjacency lists and related files.

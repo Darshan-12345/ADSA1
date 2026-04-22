@@ -1,0 +1,4 @@
+Important release notes
+
+The new multi-page dashboard improves project structure viewing,
+temporary file management, and search workflows.

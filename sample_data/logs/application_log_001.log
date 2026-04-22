@@ -1,0 +1,9 @@
+APPLICATION LOG FILE
+2024-01-15 10:30:00 INFO Application started
+2024-01-15 10:30:05 INFO Connected to database
+2024-01-15 10:30:10 WARN Cache miss for key: user_001
+2024-01-15 10:30:15 INFO Request processed: GET /search
+2024-01-15 10:30:20 INFO Response sent: 200 OK
+
+This log file contains diagnostic information.
+Logs can be cleared periodically.

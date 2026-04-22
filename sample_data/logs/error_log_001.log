@@ -1,0 +1,8 @@
+ERROR LOG FILE
+2024-01-15 11:00:00 ERROR Failed to connect to server
+2024-01-15 11:00:05 ERROR Timeout on request
+2024-01-15 11:00:10 WARN Retrying connection...
+2024-01-15 11:00:15 INFO Connection restored
+
+This log contains error messages for debugging.
+Important for troubleshooting issues.

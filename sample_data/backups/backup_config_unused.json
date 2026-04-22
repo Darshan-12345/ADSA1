@@ -1,0 +1,8 @@
+{
+  \"backup_name\": \"unused_backup\",
+  \"status\": \"deprecated\",
+  \"last_used\": \"2020-01-01\",
+  \"note\": \"This unused backup config should be deleted\"
+}
+
+This file contains the word 'unused' and will be flagged.

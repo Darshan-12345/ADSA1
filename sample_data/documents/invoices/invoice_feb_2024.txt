@@ -1,0 +1,9 @@
+INVOICE #002 - FEBRUARY 2024
+Company: XYZ Solutions
+Amount: $3,500.00
+Description: Mobile app development
+Status: PENDING
+Date: February 10, 2024
+
+This invoice contains payment details for mobile project.
+Important financial document.

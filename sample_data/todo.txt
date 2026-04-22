@@ -1,0 +1,7 @@
+Todo list
+
+1. polish dashboard cards
+2. improve autocomplete ranking
+3. review duplicate file detection
+4. clean temporary files before expiry
+5. add better preview support for text documents

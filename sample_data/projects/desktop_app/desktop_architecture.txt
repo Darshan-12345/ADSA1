@@ -1,0 +1,12 @@
+DESKTOP APPLICATION ARCHITECTURE
+
+This document describes the desktop software architecture.
+Important framework: Electron with React.
+
+FEATURES:
+- File system access
+- Native menu integration
+- Auto-update capability
+
+The architecture is designed for cross-platform compatibility.
+This is an important document for the desktop team.

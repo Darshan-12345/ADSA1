@@ -1,0 +1,10 @@
+AetherDocs notes
+
+The project mixes a React frontend with a C++ backend.
+Important ideas:
+- inverted index for search
+- trie for autocomplete
+- graph for related files
+- heap for temporary file expiry
+
+This file is useful for testing keyword search and preview.

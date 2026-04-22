@@ -1,0 +1,7 @@
+MOBILE APP USER INTERFACE DESIGN
+
+This document describes the UI components.
+Important screens: Dashboard, Search, Profile, Settings.
+
+The interface is designed for usability and accessibility.
+This document should be referenced during implementation.

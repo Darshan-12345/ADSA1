@@ -1,0 +1,11 @@
+MOBILE APPLICATION ARCHITECTURE
+
+This document outlines the mobile app architecture.
+Important design patterns used: MVVM, Repository pattern.
+
+PLATFORMS:
+- iOS (Swift)
+- Android (Kotlin)
+
+The architecture supports offline mode and sync.
+This is an important document for mobile developers.

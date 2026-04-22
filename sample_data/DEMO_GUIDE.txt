@@ -1,0 +1,348 @@
+================================================================================
+COMPREHENSIVE DEMO GUIDE - AETHERDOCS
+================================================================================
+
+This sample_data folder contains specially crafted files to demonstrate
+EVERY feature of AetherDocs.
+
+================================================================================
+FOLDER STRUCTURE (Visual Tree)
+================================================================================
+
+sample_data/
+├── documents/
+│   ├── invoices/              <- IMPORTANT FILES (auto-detected)
+│   │   ├── invoice_jan_2024.txt
+│   │   ├── invoice_feb_2024.txt
+│   │   └── invoice_march_2024.txt
+│   │
+│   ├── reports/               <- SEARCHABLE CONTENT
+│   │   ├── monthly_report_jan.txt
+│   │   ├── quarterly_report_q1.txt
+│   │   ├── annual_report_2024.txt
+│   │   └── large_dataset_analysis.txt  <- LARGE FILE
+│   │
+│   └── archived/
+│       ├── old_report_unused.txt       <- UNUSED FILE
+│       └── duplicate_invoice_jan.txt   <- DUPLICATE
+│
+├── projects/                  <- PROJECT STRUCTURE VISUALIZATION
+│   ├── web_app/
+│   │   ├── architecture_design.txt    <- IMPORTANT FILE
+│   │   ├── api_documentation.txt
+│   │   ├── readme.txt
+│   │   └── duplicate_readme.txt       <- DUPLICATE
+│   │
+│   ├── mobile_app/
+│   │   ├── app_architecture.txt       <- IMPORTANT FILE
+│   │   └── user_interface.txt
+│   │
+│   └── desktop_app/
+│       ├── desktop_architecture.txt   <- IMPORTANT FILE
+│       └── installer_config.txt
+│
+├── temp/                      <- TEMPORARY FILES (auto-detected)
+│   ├── temp_download_001.tmp
+│   ├── temp_installer_cache.tmp
+│   └── temp_session_data.tmp
+│
+├── cache/                     <- CACHE FILES (auto-detected)
+│   ├── browser_cache_001.cache
+│   └── image_cache_001.cache
+│
+├── logs/                      <- LOG FILES (auto-detected)
+│   ├── application_log_001.log
+│   └── error_log_001.log
+│
+└── backups/
+    ├── backup_invoice_jan.txt         <- DUPLICATE
+    └── backup_config_unused.json      <- UNUSED FILE
+
+================================================================================
+FEATURE-BY-FEATURE DEMONSTRATION
+================================================================================
+
+------------------------------------------------------------------------------
+1. SEARCH ENGINE (Inverted Index)
+------------------------------------------------------------------------------
+
+TRY THESE SEARCHES:
+
+Query: "invoice"
+  Expected: 6 results
+  - invoice_jan_2024.txt
+  - invoice_feb_2024.txt
+  - invoice_march_2024.txt
+  - duplicate_invoice_jan.txt (duplicate)
+  - backup_invoice_jan.txt (duplicate)
+  - error_log_001.log (contains "invoice" in content)
+
+Query: "report"
+  Expected: 5 results
+  - monthly_report_jan.txt
+  - quarterly_report_q1.txt
+  - annual_report_2024.txt
+  - old_report_unused.txt
+  - large_dataset_analysis.txt
+
+Query: "architecture"
+  Expected: 3 results
+  - architecture_design.txt
+  - app_architecture.txt
+  - desktop_architecture.txt
+
+Query: "2024"
+  Expected: Multiple files with year 2024 mentioned
+
+Query: "monthly"
+  Expected: monthly_report_jan.txt
+
+Query: "temporary"
+  Expected: All temp/*.tmp files + content mentions
+
+------------------------------------------------------------------------------
+2. AUTOCOMPLETE (Trie Data Structure)
+------------------------------------------------------------------------------
+
+TYPE SLOWLY AND WATCH SUGGESTIONS:
+
+Type: "inv"
+  Expected suggestions: invoice, investment, inventory...
+
+Type: "rep"
+  Expected suggestions: report, repository, replacement...
+
+Type: "arch"
+  Expected suggestions: architecture, archive, archived...
+
+Type: "temp"
+  Expected suggestions: temporary, template, temperature...
+
+Type: "doc"
+  Expected suggestions: documents, documentation...
+
+------------------------------------------------------------------------------
+3. IMPORTANT FILES DETECTION
+------------------------------------------------------------------------------
+
+FILES AUTOMATICALLY MARKED AS IMPORTANT (Blue indicator):
+
+By name pattern "architecture":
+  - architecture_design.txt
+  - app_architecture.txt
+  - desktop_architecture.txt
+
+By name pattern "invoice":
+  - invoice_jan_2024.txt
+  - invoice_feb_2024.txt
+  - invoice_march_2024.txt
+
+By content pattern "important":
+  - error_log_001.log (contains word "important")
+
+------------------------------------------------------------------------------
+4. TEMPORARY FILES DETECTION (Min Heap)
+------------------------------------------------------------------------------
+
+FILES AUTOMATICALLY MARKED AS TEMPORARY (Red indicator):
+
+By extension .tmp:
+  - temp/temp_download_001.tmp
+  - temp/temp_installer_cache.tmp
+  - temp/temp_session_data.tmp
+
+By extension .log:
+  - logs/application_log_001.log
+  - logs/error_log_001.log
+
+By name containing "temp":
+  - All files in temp/ folder
+
+By name containing "cache":
+  - cache/browser_cache_001.cache
+  - cache/image_cache_001.cache
+
+TEMP FILE MANAGEMENT DEMO:
+1. Go to "Temporary" tab
+2. See all auto-detected temporary files
+3. Right-click any file → "Mark as Temporary"
+4. Set TTL: 30 (seconds)
+5. Watch the countdown timer
+6. Click "Delete Expired" when timer hits 0
+
+------------------------------------------------------------------------------
+5. DUPLICATE FILE DETECTION (Hashing)
+------------------------------------------------------------------------------
+
+DUPLICATE GROUPS DETECTED (same content + size):
+
+Group 1 - Invoice January:
+  1. documents/invoices/invoice_jan_2024.txt
+  2. documents/archived/duplicate_invoice_jan.txt
+  3. backups/backup_invoice_jan.txt
+
+Group 2 - Web App Readme:
+  1. projects/web_app/readme.txt
+  2. projects/web_app/duplicate_readme.txt
+
+VIEW IN INSIGHTS TAB:
+- Click "Insights"
+- Scroll to "Duplicate Files" section
+- See both groups listed
+
+------------------------------------------------------------------------------
+6. UNUSED FILES DETECTION
+------------------------------------------------------------------------------
+
+FILES FLAGGED AS UNUSED:
+
+By name containing "unused":
+  - documents/archived/old_report_unused.txt
+  - backups/backup_config_unused.json
+
+VIEW IN INSIGHTS TAB:
+- Click "Insights"
+- Scroll to "Unused Files" section
+- See both files listed
+
+------------------------------------------------------------------------------
+7. LARGE FILES DETECTION
+------------------------------------------------------------------------------
+
+LARGE FILES (by size):
+  - documents/reports/large_dataset_analysis.txt
+
+This file contains 100+ lines of repeated text to create size.
+
+VIEW IN INSIGHTS TAB:
+- Click "Insights"
+- Scroll to "Large Files" section
+
+------------------------------------------------------------------------------
+8. PROJECT STRUCTURE VISUALIZATION (Tree + DFS)
+------------------------------------------------------------------------------
+
+VIEW IN STRUCTURE TAB:
+1. Click "Structure" tab
+2. See complete folder hierarchy
+3. Expand "projects/" folder
+4. Expand "web_app/" folder
+5. Click on any file to see its path
+
+DEMONSTRATES:
+- Recursive tree structure
+- Folder vs file distinction (icons)
+- Size display
+- Path display on selection
+
+------------------------------------------------------------------------------
+9. FILE RELATIONSHIPS GRAPH (Adjacency List)
+------------------------------------------------------------------------------
+
+VIEW IN RELATIONSHIPS TAB:
+1. Click "Relationships" tab
+2. Select: projects/web_app/architecture_design.txt
+3. See related files:
+   - Other .txt files (same extension)
+   - Files in same folder
+   - Duplicate files (connected by content)
+
+GRAPH CONNECTIONS CREATED BY:
+- Same extension (.txt files connected)
+- Same parent folder (siblings connected)
+- Duplicate content (copies connected)
+
+------------------------------------------------------------------------------
+10. FILE MANAGEMENT OPERATIONS
+------------------------------------------------------------------------------
+
+TRY THESE ACTIONS (Right-click menu):
+
+Rename:
+  - Right-click any file → Rename
+  - Change name → File renamed → Auto-rescan
+
+Mark Important:
+  - Right-click normal file → Mark as Important
+  - File gets important flag
+
+Mark Temporary:
+  - Right-click normal file → Mark as Temporary
+  - Set TTL (e.g., 300 seconds = 5 minutes)
+  - File appears in Temporary tab
+
+================================================================================
+QUICK DEMO SCRIPT (5 Minutes)
+================================================================================
+
+STEP 1 - SCAN (30 sec)
+  [] Start backend:  .\smart_document_server.exe
+  [] Start frontend: npm run dev
+  [] Open browser: http://localhost:5173
+  [] Click "Scan Folder"
+  [] Select: D:\SEM_4_project\ADSA1\sample_data
+  [] Expected: ~25 files, 9 folders indexed
+
+STEP 2 - SEARCH (1 min)
+  [] Search: "invoice" → See 6 results
+  [] Search: "report" → See 5 results
+  [] Search: "architecture" → See 3 results
+
+STEP 3 - AUTOCOMPLETE (30 sec)
+  [] Type: "inv" → See suggestions dropdown
+  [] Type: "rep" → See suggestions
+
+STEP 4 - INSIGHTS (1 min)
+  [] Click "Insights" tab
+  [] Show: Duplicate Files (2 groups)
+  [] Show: Large Files
+  [] Show: Unused Files (2 files)
+
+STEP 5 - TEMPORARY FILES (1 min)
+  [] Click "Temporary" tab
+  [] Show auto-detected temp files
+  [] Right-click file → Mark as Temporary
+  [] Set TTL: 30 seconds
+  [] Watch countdown
+  [] Click "Delete Expired"
+
+STEP 6 - STRUCTURE (30 sec)
+  [] Click "Structure" tab
+  [] Expand projects/ → web_app/
+  [] Show hierarchy
+
+STEP 7 - RELATIONSHIPS (30 sec)
+  [] Click "Relationships" tab
+  [] Select architecture_design.txt
+  [] Show related files
+
+================================================================================
+TECHNICAL SUMMARY
+================================================================================
+
+DATA STRUCTURES DEMONSTRATED:
+  ✓ Inverted Index    - Search feature
+✓ Trie               - Autocomplete feature
+✓ Tree (DFS)         - Structure visualization
+✓ Graph              - File relationships
+✓ Min Heap           - Temporary file expiry
+✓ Hashing            - Duplicate detection
+
+FILE COUNTS:
+  - Total Files: ~25
+  - Important Files: ~7
+  - Temporary Files: ~7
+  - Duplicate Groups: 2
+  - Unused Files: 2
+  - Large Files: 1
+
+EXTENSIONS:
+  - .txt (text documents)
+  - .tmp (temporary files)
+  - .log (log files)
+  - .cache (cache files)
+  - .json (JSON data)
+
+================================================================================
+END OF DEMO GUIDE
+================================================================================

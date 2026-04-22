@@ -1,0 +1,12 @@
+API DOCUMENTATION
+
+This document describes all API endpoints.
+Important for frontend developers.
+
+ENDPOINTS:
+GET /search - Search files by query
+GET /autocomplete - Get suggestions
+POST /scan-folder - Scan directory
+GET /get-structure - Get file tree
+
+This documentation is kept up to date.
